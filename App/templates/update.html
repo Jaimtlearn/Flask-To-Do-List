@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Update Task{% endblock %}
+{% block content %}
+<div class="mt-4">
+    <h2>Edit Task</h2>
+    <form method="POST" action="{{ url_for('main.update_task', task_id=task._id) }}">
+        <div class="form-group">
+            <input type="text" class="form-control" name="content" value="{{ task.content }}" placeholder="Enter new task content">
+        </div>
+        <button type="submit" class="btn btn-primary">Update Task</button>
+        <a href="{{ url_for('main.index') }}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}
