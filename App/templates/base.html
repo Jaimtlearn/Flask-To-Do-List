@@ -8,7 +8,9 @@
 </head>
 <body>
     <nav class="bg-light navbar navbar-expand-lg navbar-light">
-        <a class="mx-auto fs-2 navbar-brand" href="{{ url_for('main.index') }}">To-Do List</a>
+        <a class="mx-auto navbar-brand" href="{{ url_for('main.index') }}">
+            <h2 class="fw-bold">To-Do List</h2>
+        </a>
     </nav>
     <div class="mt-4 container">
         {% with messages = get_flashed_messages(with_categories=true) %}
